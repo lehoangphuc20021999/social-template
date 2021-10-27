@@ -1,0 +1,128 @@
+section#main-sidebar.open
+    aside#sidebar-wrapper
+        .sidebar-header.d-flex.flex-column.align-items-center.justify-content-center
+            #hide-sidebar-mobile.d-block.d-lg-none
+                i.bx.bx-x
+            .sidebar-brand
+                a(href="/").d-flex.align-items-center.justify-content-center
+                    img.header-logo(src="/assets/images/logo.png", alt="Logo Brand")
+                    span.logo-name Otika
+                span.small-text Social Network
+            .user-panel
+                .info
+                    .profile-avatar
+                        a(href="/trangcanhan")
+                            img(src="/assets/images/user.jpg", alt="User")
+                    .profile-name.d-flex.flex-column
+                        a(href="/trangcanhan").text-hover-purple Lê Hoàng Phúc
+                        small Member
+                    .major 
+                        span Chuyên ngành:
+                        span &nbsp
+                        span Kỹ thuật phần mềm
+        ul.sidebar-menu
+            li  
+                .d-flex.align-items-center
+                    i.bx.bx-home
+                    a(href="/") 
+                        span Trang chủ
+            li.dropdown    
+                .d-flex.align-items-center
+                    i.bx.bx-list-ul
+                    a(href="#")
+                        span Phân loại thông báo
+                        .icon-arrow.ml-auto
+                            i.icofont-rounded-up
+                ul
+                    li
+                        .d-flex.align-items-center
+                            i.icofont-users
+                            a(href="/phongban")
+                                span Phòng ban
+                    li 
+                        .d-flex.align-items-center
+                            i.bx.bx-list-ul
+                            a(href="/thongbao")
+                                span Tất cả thông báo     
+            li
+                .d-flex.align-items-center
+                    i.bx.bx-user-circle
+                    a(href="/trangcanhan") 
+                        span Thông tin cá nhân
+            li    
+                .d-flex.align-items-center
+                    i.bx.bx-book-reader
+                    a(href="/quanlyphongban")
+                        span Quản lý phòng ban
+            li    
+                .d-flex.align-items-center
+                    i.bx.bxs-group
+                    a(href="/quanlylop")
+                        span Quản lý lớp
+            li
+                .d-flex.align-items-center
+                    i.bx.bx-exit
+                    a(href="/login")
+                        span Đăng xuất
+
+section#main-sidebar-mobile
+    aside#sidebar-wrapper
+        .sidebar-header.d-flex.flex-column.align-items-center.justify-content-center
+            .sidebar-brand
+                a(href="/").d-flex.align-items-center.justify-content-center
+                    img.header-logo(src="/assets/images/logo.png", alt="Logo Brand")
+        ul.sidebar-menu
+            li  
+                .d-flex.align-items-center
+                    a(href="javascript:void(0)")
+                        i.bx.bx-home
+                    .dropdown-sublist
+                        a(href="/") 
+                            h5.text-center Trang chủ
+            li.dropdown-mobile   
+                .d-flex.align-items-center
+                    a(href="javascript:void(0)")
+                        i.bx.bx-list-ul
+                    .dropdown-sublist
+                        a(href="javascript:void(0)").no-hover
+                            h5.text-center Phân loại thông báo
+                        ul
+                            li
+                                .d-flex.align-items-center
+                                    i.icofont-rounded-right
+                                    a(href="/phongban")
+                                        span Phòng ban
+                            li 
+                                .d-flex.align-items-center
+                                    i.icofont-rounded-right
+                                    a(href="/thongbao")
+                                        span Tất cả thông báo
+            li
+                .d-flex.align-items-center
+                    a(href="javascript:void(0)")
+                        i.bx.bx-user-circle
+                    .dropdown-sublist
+                        a(href="/trangcanhan") 
+                            h5.text-center Thông tin cá nhân
+            li
+                .d-flex.align-items-center
+                    a(href="javascript:void(0)")
+                        i.bx.bx-book-reader
+                    .dropdown-sublist
+                        a(href="/quanlyphongban")
+                            h5.text-center Quản lý phòng ban
+            li 
+                .d-flex.align-items-center
+                    a(href="javascript:void(0)")
+                        i.bx.bxs-group
+                    .dropdown-sublist
+                        a(href="/quanlylop")
+                            h5.text-center Quản lý lớp
+            li
+                .d-flex.align-items-center
+                    a(href="javascript:void(0)")
+                        i.bx.bx-exit
+                    .dropdown-sublist
+                        a(href="/login") 
+                            h5.text-center Đăng xuất
+            

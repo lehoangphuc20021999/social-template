@@ -1,0 +1,90 @@
+section#create-notification-section
+    .page-content
+        .container
+            .section-wrapper
+                .section-title
+                    h4 Tạo thông báo
+            #profile.tab-pane(role='tabpanel' aria-labelledby='profile-tab')
+                .row 
+                    .col-12
+                        .your-profile
+                            ul#myTab.nav.nav-tabs.justify-content-center.justify-content-md-start(role='tablist')
+                                li.nav-item(role='presentation')
+                                    a#viewList-tab.nav-link.active(data-toggle='tab' href='#viewList' role='tab' aria-controls='viewList' aria-selected='true') Danh sách thông báo
+                                li.nav-item(role='presentation')
+                                    a#createNotification-tab.nav-link(data-toggle='tab' href='#createNotification' role='tab' aria-controls='createNotification' aria-selected='false') Tạo thông báo
+                                li.nav-item(role='presentation')
+                                    a#changePassword-tab.nav-link(data-toggle='tab' href='#changePassword' role='tab' aria-controls='changePassword' aria-selected='false') Thay đổi mật khẩu
+                            #myTabContent.tab-content
+                                #viewList.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='viewList-tab')
+                                    table.table.table-striped
+                                        thead
+                                            tr
+                                                th
+                                                    span Mã thông báo
+                                                th
+                                                    span Tiêu đề
+                                                th
+                                                    span Nội dung
+                                                th
+                                                    span Phòng ban
+                                                th
+                                                    span Thao tác
+                                        tbody#thongBaoTable
+                                    #fail-alert-fetch
+                                    #fail-alert-update
+                                    #fail-alert-delete
+                                #createNotification.tab-pane.fade(role='tabpanel' aria-labelledby='createNotification-tab')
+                                    form#form-create-notification
+                                        .form-group
+                                            label(for="notificationSubject") Chủ đề:
+                                            input.form-control#notificationSubject(type="text", name="notificationSubject", placeholder="Nhập chủ đề")
+                                        .form-group
+                                            label(for="notificationContent") Nội dung:
+                                            textarea#notificationContent.form-control(name="notificationContent", placeholder="Nhập nội dung...")
+                                        .form-group
+                                            label(for="department") Phòng ban:
+                                            select#department.form-control(name='department')
+                                                option(value="" selected disabled) Chọn phòng ban
+                                        .form-group
+                                            .error
+                                                .alert.alert-danger.alert-dismissible.fade.show(role='alert')
+                                                    strong Thất bại! 
+                                                    span &nbsp
+                                                    span.text
+                                                    button.close(type='button' aria-label='Close')
+                                                        span(aria-hidden='true') ×
+                                        .text-right
+                                            button.btn.btn-save.background-hover-light-purple(type="submit") Tạo thông báo
+                                    #success-alert-notify
+                                    #fail-alert-notify
+                                #changePassword.tab-pane.fade(role='tabpanel' aria-labelledby='changePassword-tab')
+                                    form#form-change-password
+                                        .form-group
+                                            label(for="oldPassword") Mật khẩu cũ:
+                                            input.form-control#oldPassword(type="password", name="oldPassword", placeholder="Nhập mật khẩu cũ...")
+                                        .form-group
+                                            label(for="newPassword") Mật khẩu mới:
+                                            input.form-control#newPassword(type="password", name="newPassword", placeholder="Nhập mật khẩu mới...")
+                                        .form-group
+                                            label(for="rePassword") Nhập lại mật khẩu:
+                                            input.form-control#rePassword(type="password", name="rePassword", placeholder="Nhập lại mật khẩu...")
+                                        .form-group
+                                            .error
+                                                .alert.alert-danger.alert-dismissible.fade.show(role='alert')
+                                                    strong Thất bại! 
+                                                    span &nbsp
+                                                    span.text
+                                                    button.close(type='button' aria-label='Close')
+                                                        span(aria-hidden='true') ×
+                                            .success
+                                                .alert.alert-success.alert-dismissible.fade.show(role='alert')
+                                                    strong Thành công!
+                                                    span &nbsp
+                                                    span.text
+                                                    button.close(type='button' aria-label='Close')
+                                                        span(aria-hidden='true') ×
+                                        .text-right
+                                            button.btn.btn-save.background-hover-light-purple(type="submit") Đổi mật khẩu
+                                    #success-alert-notify
+                                    #fail-alert-notify

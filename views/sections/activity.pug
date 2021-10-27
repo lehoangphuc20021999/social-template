@@ -1,0 +1,31 @@
+section#activity
+    .alert.alert-light(role="alert") Khoa CNTT vừa đăng một thông báo.
+        span &nbsp
+        a(href="#") Kết quả chấm phúc khảo môn phương pháp lập trình
+    .activity-form 
+        form(action="")
+            .form-group.d-flex.mb-0
+                .profile-avatar 
+                    a(href="/trangcanhan")
+                        img(src="/assets/images/user.jpg", alt="User")
+                textarea#textarea-activity.form-control(rows="1", placeholder="Phúc ơi, bạn đang nghĩ gì thế ?")
+            ul.upload-filelist
+                li.upload-file 
+                    .d-flex.flex-column.align-items-center
+                        .file-thumb
+                            //- .row to allow flex-wrap (Auto break line when not enough width)
+                            .row
+                        .file-action
+                            i.bx.bx-x-circle
+            .form-bottom
+                .files
+                    label(for="files").background-hover-purple
+                        i.icofont-file-image
+                        span Đính kèm ảnh
+                    input#files(type="file", name="", multiple="multiple", accept="image/png, image/jpeg", style="visibility:hidden;")
+                .btn-wrapper.ml-auto
+                    input.btn#btn-cancel(type="reset", value="Đóng") 
+                    button.btn.btn-primary(type="submit") Đăng
+include ./posts
+                                
+                    

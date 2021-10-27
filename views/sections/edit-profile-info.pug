@@ -1,0 +1,56 @@
+section#edit-profile-info
+    .page-content   
+        form#form-edit-profile-info
+            .page-content-header
+                .container
+                    .row
+                        .col-12        
+                            .item-header     
+                                .item-header-wrapper
+                                    .header-cover-image
+                                        img(src="/assets/images/bg-cover.png", alt="Header Cover Image")
+                                    .item-header-avatar
+                                        a.image.d-block(href="#")
+                                            img#previewAvatar(src="/assets/images/personal/3.jpg", alt="Header Avatar")
+                                            input#URLavatar(type="hidden", name="URLavatar", value="")
+                                        label(for="avatar").mb-0
+                                            input#avatar(type="file", name="avatar", accept="image/png, image/jpeg", multiple="multiple")
+                                            .avatar-inner
+                                                i.bx.bxs-camera
+                                    .header-actions
+                                h3.profile-name.textcenter Phúc Lê
+            .page-content-body
+                .container
+                    .row 
+                        .col-12
+                            .page-content-body-wrapper
+                                #myTabContent.tab-content
+                                    .your-profile
+                                        ul#myTab.nav.nav-tabs.justify-content-center.justify-content-md-start(role='tablist')
+                                            li.nav-item(role='presentation')
+                                                a#editProfile-tab.nav-link.active(data-toggle='tab' href='#editProfile' role='tab' aria-controls='editProfile' aria-selected='false') Chỉnh sửa thông tin cá nhân
+                                        #myTabContent.tab-content
+                                            #editProfile.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='editProfile-tab')
+                                                .form-group
+                                                    label(for="name") Tên hiển thị
+                                                    input.form-control#name(type="text", name="name")
+                                                .form-group
+                                                    label(for="className") Lớp
+                                                    select#className.form-control(name="className")
+                                                        option(disabled selected value="") Chọn Lớp
+                                                .form-group
+                                                    label(for="department") Khoa
+                                                    select#department.form-control(name="department")
+                                                        option(disabled selected value="") Khoa/Phòng
+                                                .form-group
+                                                    input.form-control#email(type="hidden", name="email")
+                                                .form-group
+                                                    .error
+                                                        .alert.alert-danger.alert-dismissible.fade.show(role='alert')
+                                                            strong Thất bại! 
+                                                            span &nbsp
+                                                            span.text
+                                                            button.close(type='button' aria-label='Close')
+                                                                span(aria-hidden='true') ×
+                                                .text-right
+                                                    button.btn.btn-save.background-hover-light-purple(type="submit") Lưu thay đổi

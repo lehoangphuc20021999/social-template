@@ -1,0 +1,80 @@
+section#manage-classes-section
+    .page-content
+        .container
+            .section-wrapper
+                .section-title
+                    h4 Xem danh sách lớp
+            #profile.tab-pane(role='tabpanel' aria-labelledby='profile-tab')
+                .row
+                    .col-12
+                        .your-profile
+                            ul#myTab.nav.nav-tabs.justify-content-center.justify-content-md-start(role='tablist')
+                                li.nav-item(role='presentation')
+                                    a#viewList-tab.nav-link.active(data-toggle='tab' href='#viewList' role='tab' aria-controls='viewList' aria-selected='true') Danh sách lớp
+                                li.nav-item(role='presentation')
+                                    a#createClass-tab.nav-link(data-toggle='tab' href='#createClass' role='tab' aria-controls='createClass' aria-selected='false') Tạo lớp
+                                li.nav-item(role='presentation')
+                                    a#createAccount-tab.nav-link(data-toggle='tab' href='#createAccount' role='tab' aria-controls='createAccount' aria-selected='false') Tạo tài khoản
+                            #myTabContent.tab-content
+                                #viewList.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='viewList-tab')
+                                    table.table.table-striped
+                                        thead
+                                            tr
+                                                th 
+                                                    span STT
+                                                th
+                                                    span Mã lớp
+                                                th
+                                                    span Tên lớp
+                                        tbody 
+                                            tr 
+                                                td 
+                                                    span 1
+                                                td 
+                                                    span 17050201
+                                                td 
+                                                    span Kỹ thuật phần mềm 1
+                                            tr 
+                                                td 
+                                                    span 2
+                                                td 
+                                                    span 17050201
+                                                td 
+                                                    span Kỹ thuật phần mềm 2
+                                            tr 
+                                                td 
+                                                    span 3
+                                                td 
+                                                    span 17050201
+                                                td 
+                                                    span Kỹ thuật phần mềm 3
+
+                                #createClass.tab-pane.fade(role='tabpanel' aria-labelledby='createClass-tab')
+                                    form(action="", method="POST")
+                                        .form-group
+                                            label(for="name") Tên lớp:
+                                            input.form-control#name(type="text", name="nameClass", value="Kỹ thuật phần mềm 3")
+                                        .form-group
+                                            label(for="class") Mã lớp:
+                                            input.form-control#class(type="text", name="codeClass", value="17050201" disabled)
+                                        .text-right
+                                            button.btn.btn-save(type="submit").background-hover-light-purple Tạo
+                                #createAccount.tab-pane.fade(role='tabpanel' aria-labelledby='createAccount-tab')
+                                    form(action="", method="POST")
+                                        .form-group
+                                            label(for="nameAccount") Tên lớp:
+                                            input.form-control#nameAccount(type="text", name="nameAccount", value="Phòng CTHSSV")
+                                        .form-group
+                                            label(for="codeAccount") Mã lớp:
+                                            input.form-control#codeAccount(type="text", name="codeAccount", value="17050201" disabled)
+                                        .form-group
+                                            label(for="email") Email:
+                                            input.form-control#email(type="email", name="email", value="lehoangphuc20021999@gmail.com")
+                                        .form-group
+                                            label(for="password") Mật khẩu:
+                                            input.form-control#password(type="password", name="password", value="123123")
+                                        .form-group
+                                            label(for="rePassword") Nhập lại mật khẩu:
+                                            input.form-control#rePassword(type="password", name="rePassword", value="123123")
+                                        .text-right
+                                            button.btn.btn-save(type="submit").background-hover-light-purple Tạo

@@ -1,0 +1,55 @@
+#notification-details-info {
+    .title {
+        font-size: 34px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: $dark-grey;
+    }
+    .article {
+        .article-summary {
+            margin-bottom: 15px;
+        }
+        .article-content {
+            p {
+                font-family: "Times New Roman", Times, serif;
+                text-indent: 25px;
+                font-size: 26px;
+                text-align: justify;
+            }
+        }
+        .date-time {
+            text-decoration: underline;
+        }
+    }
+}
+
+//- RESPONSIVE
+@include max-mobile {
+    #notification-details-info {
+        .title {
+            font-size: 28px;
+        }
+        .article {
+            .article-content {
+                p {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+@include max-smobile {
+    #notification-details-info {
+        .title {
+            font-size: 26px;
+        }
+        .article {
+            .article-content {
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

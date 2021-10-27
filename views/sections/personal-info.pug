@@ -1,0 +1,439 @@
+section#personal-info
+    .page-content
+        .page-content-header
+            .container
+                .row
+                    .col-12        
+                        .item-header     
+                            .item-header-wrapper
+                                .header-cover-image
+                                    a.image-lightbox(href="/assets/images/personal/2.jpg" data-gallery="imageWallpaper")
+                                        img(src="/assets/images/personal/2.jpg", alt="Header Cover Image")
+                                .item-header-avatar
+                                    a.image-lightbox(href="/assets/images/personal/3.jpg" data-gallery="imageAvatar")
+                                        img(src="/assets/images/personal/3.jpg", alt="Header Avatar")
+                                    form(action="", method="POST", enctype="multipart/form-data")
+                                        label(for="avatar").mb-0
+                                            input#avatar(type="file", name="", accept="image/png, image/jpeg")
+                                            .avatar-inner
+                                                i.bx.bxs-camera
+                                .header-actions
+                                    form(action="", method="POST", enctype="multipart/form-data")
+                                        label(for="coverImage").mb-0
+                                            input#coverImage(type="file", name="", accept="image/png, image/jpeg")
+                                            .actions-inner.d-flex.align-items-center
+                                                i.bx.bxs-camera
+                                                span Chỉnh sửa ảnh bìa
+                            h3.profile-name.textcenter Phúc Lê
+                        .menu-tabs
+                            ul#myTab.nav.nav-tabs(role='tablist')
+                                li.nav-item(role='presentation')
+                                    a#yourPost-tab.nav-link.active(data-toggle='tab' href='#yourPost' role='tab' aria-controls='yourPost' aria-selected='true') Bài viết
+                                li.nav-item(role='presentation')
+                                    a#profile-tab.nav-link(data-toggle='tab' href='#profile' role='tab' aria-controls='profile' aria-selected='false') Giới thiệu
+        .page-content-body
+            .container
+                .row 
+                    .col-12
+                        .page-content-body-wrapper
+                            #myTabContent.tab-content
+                                #yourPost.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='yourPost-tab')
+                                    .row
+                                        .col-12.col-lg-5.mb-4.mb-lg-0
+                                            .your-photo 
+                                                h5.title.text-center My photos
+                                                .list-photo
+                                                    .row.mx-0
+                                                        .col-4
+                                                            .photo
+                                                                a.image-lightbox(href="/assets/images/personal/myphoto.jpg" data-gallery="myPhotos")
+                                                                    img(src="/assets/images/personal/myphoto.jpg", alt="Gallery Photo")
+                                                        .col-4
+                                                            .photo
+                                                                a.image-lightbox(href="/assets/images/personal/myphoto.jpg" data-gallery="myPhotos")
+                                                                    img(src="/assets/images/personal/myphoto.jpg", alt="Gallery Photo")
+                                                        .col-4
+                                                            .photo
+                                                                a.image-lightbox(href="/assets/images/personal/myphoto.jpg" data-gallery="myPhotos")
+                                                                    img(src="/assets/images/personal/myphoto.jpg", alt="Gallery Photo")
+                                                        .col-4
+                                                            .photo
+                                                                a.image-lightbox(href="/assets/images/personal/myphoto.jpg" data-gallery="myPhotos")
+                                                                    img(src="/assets/images/personal/myphoto.jpg", alt="Gallery Photo")
+                                                        .col-4
+                                                            .photo
+                                                                a.image-lightbox(href="/assets/images/personal/myphoto.jpg" data-gallery="myPhotos")
+                                                                    img(src="/assets/images/personal/myphoto.jpg", alt="Gallery Photo")
+                                                        .col-4
+                                                            .photo
+                                                                a.image-lightbox(href="/assets/images/personal/myphoto.jpg" data-gallery="myPhotos")
+                                                                    img(src="/assets/images/personal/myphoto.jpg", alt="Gallery Photo")
+                                        .col-12.col-lg-7
+                                            .activity-form 
+                                                form(action="", method="POST")
+                                                    .form-group.d-flex.mb-0
+                                                        .profile-avatar 
+                                                            a(href="/trangcanhan")
+                                                                img(src="/assets/images/user.jpg", alt="User")
+                                                        textarea#textarea-activity.form-control(rows="1", placeholder="Phúc ơi, bạn đang nghĩ gì thế ?")
+                                                    ul.upload-filelist
+                                                        li.upload-file 
+                                                            .d-flex.flex-column.align-items-center
+                                                                .file-thumb
+                                                                    .row
+                                                                .file-action
+                                                                    i.bx.bx-x-circle
+                                                    .form-bottom
+                                                        .files
+                                                            label(for="files").background-hover-purple
+                                                                i.icofont-file-image
+                                                                span Đính kèm ảnh
+                                                            input#files(type="file", name="", multiple="multiple", accept="image/png, image/jpeg", style="visibility:hidden;")
+                                                        .btn-wrapper.ml-auto
+                                                            input.btn#btn-cancel(type="reset", value="Đóng") 
+                                                            button.btn.btn-primary(type="submit") Đăng
+                                            //------------------------------------------------
+                                            //- POST 1
+                                            .post-item
+                                                .post-header.d-flex.align-items-center
+                                                    .profile-avatar
+                                                        a(href="/trangcanhan")
+                                                            img(src="/assets/images/user.jpg", alt="User")
+                                                    .post-meta.d-flex.flex-column
+                                                        a(href="/trangcanhan").text-hover-purple Lê Hoàng Phúc
+                                                        span 10 months, 1 week ago
+                                                    .dots-icon.ml-auto
+                                                        .dots.text-right
+                                                            i.bx.bx-dots-horizontal-rounded
+                                                        ul.actions
+                                                            li
+                                                                a(href="#").text-hover-purple
+                                                                    i.bx.bx-trash
+                                                                    span Chuyển vào thùng rác
+                                                            li 
+                                                                a(href="#").text-hover-purple
+                                                                    i.bx.bx-edit-alt
+                                                                    span Chỉnh sửa bài viết
+                                                .post-inner
+                                                    .post-inner-text
+                                                        span At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in cul
+                                                    .image
+                                                        a.d-block.image-lightbox(href="/assets/images/personal/1.jpg" data-gallery="portfolioGallery" title="Image Status")
+                                                            img(src="/assets/images/personal/1.jpg", alt="Image Status")
+                                                .comment-area.mt-3   
+                                                    .comment-header
+                                                        .d-flex.align-items-center
+                                                            span
+                                                                img(src="/assets/images/icons/01.png", alt="Icon")              
+                                                            .total-like
+                                                                span.likes 140
+                                                                span &nbsp
+                                                                span Lượt thích
+                                                            a(href="javascript:void(0)").total-comment.ml-auto
+                                                                span.comment-count 200
+                                                                span &nbsp
+                                                                span Bình luận
+                                                        .btn-wrapper.d-flex.align-items-center.justify-content-around.hideDiv
+                                                            .btn.btn-like-post 
+                                                                .icons-meta
+                                                                    a(href="#")
+                                                                        i.bx.bx-like
+                                                                        span Thích
+                                                                    .icon-menu.d-flex
+                                                                        a.like(href="#", title="Like") 
+                                                                            img(src="/assets/images/icons/01.png", alt="Icon Like")
+                                                                            span.tooltiptext Like
+                                                                        a.love(href="#", title="Love") 
+                                                                            img(src="/assets/images/icons/02.png", alt="Icon Love")
+                                                                            span.tooltiptext Thả tim
+                                                                        a.lovely(href="#", title="Lovely") 
+                                                                            img(src="/assets/images/icons/07.png", alt="Icon Lovely")
+                                                                            span.tooltiptext Thương thương
+                                                                        a.think(href="#", title="Think") 
+                                                                            img(src="/assets/images/icons/05.png", alt="Icon Think")
+                                                                            span.tooltiptext Suy ngẫm 
+                                                                        a.sad(href="#", title="Sad") 
+                                                                            img(src="/assets/images/icons/06.png", alt="Icon Sad")
+                                                                            span.tooltiptext Buồn
+                                                                        a.haha(href="#", title="Haha") 
+                                                                            img(src="/assets/images/icons/04.png", alt="Icon Haha")
+                                                                            span.tooltiptext Haha
+                                                                        a.rage(href="#", title="Rage", style="width: 28px") 
+                                                                            img(src="/assets/images/icons/08.png", alt="Icon Rage")
+                                                                            span.tooltiptext Phẫn nộ
+                                                            .btn.btn-comment-post 
+                                                                a(href="#")
+                                                                    i.bx.bx-comment
+                                                                    span Bình luận
+                                                    .comments.hideDiv
+                                                        ul 
+                                                            li
+                                                                .acomment.d-flex
+                                                                    .acomment-avatar.profile-avatar
+                                                                        a(href="/trangcanhan")
+                                                                            img(src="/assets/images/user.jpg", alt="User")
+                                                                    .d-flex.flex-column
+                                                                        .acomment-info.d-flex.flex-column
+                                                                            .acomment-meta
+                                                                                a(href="#").text-hover-purple Lê Hoàng Phúc
+                                                                            .acomment-content
+                                                                                span At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in cul                      
+                                                                            .dots-icon.dots-icon_comment
+                                                                                .dots.text-right
+                                                                                    i.bx.bx-dots-horizontal-rounded
+                                                                                ul.actions
+                                                                                    li
+                                                                                        a(href="#").text-hover-purple
+                                                                                            i.bx.bx-trash
+                                                                                            span Xóa
+                                                                                    li 
+                                                                                        a(href="#").text-hover-purple
+                                                                                            i.bx.bx-edit-alt
+                                                                                            span Chỉnh sửa
+                                                                        .actions.d-flex
+                                                                            button(type="button").btn-like.text-hover-purple Thích 
+                                                                                span ·
+                                                                            span 5 giờ
+                                                        ul 
+                                                            li
+                                                                .acomment.d-flex
+                                                                    .acomment-avatar.profile-avatar
+                                                                        a(href="/trangcanhan")
+                                                                            img(src="/assets/images/user.jpg", alt="User")
+                                                                    .d-flex.flex-column
+                                                                        .acomment-info.d-flex.flex-column
+                                                                            .acomment-meta
+                                                                                a(href="#").text-hover-purple Lê Hoàng Phúc
+                                                                            .acomment-content
+                                                                                span At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in cul
+                                                                            .dots-icon.dots-icon_comment
+                                                                                .dots.text-right
+                                                                                    i.bx.bx-dots-horizontal-rounded
+                                                                                ul.actions
+                                                                                    li
+                                                                                        a(href="#").text-hover-purple
+                                                                                            i.bx.bx-trash
+                                                                                            span Xóa
+                                                                                    li 
+                                                                                        a(href="#").text-hover-purple
+                                                                                            i.bx.bx-edit-alt
+                                                                                            span Chỉnh sửa               
+                                                                        .actions.d-flex
+                                                                            button(type="button").btn-like.text-hover-purple Thích 
+                                                                                span ·
+                                                                            span 5 giờ
+
+                                                    .your-reply.hideDiv
+                                                        .d-flex.align-items-center
+                                                            .profile-avatar
+                                                                a(href="/trangcanhan")
+                                                                    img(src="/assets/images/user.jpg", alt="User")
+                                                            .post-reply-content
+                                                                form(action="", method="POST") 
+                                                                    textarea.form-control.padding-right-80(placeholder="Viết bình luận...")
+                                                                    button.btn(type="submit") Đăng
+                                
+                                            //- POST 2
+                                            .post-item
+                                                .post-header.d-flex.align-items-center
+                                                    .profile-avatar
+                                                        a(href="/trangcanhan")
+                                                            img(src="/assets/images/user.jpg", alt="User")
+                                                    .post-meta.d-flex.flex-column
+                                                        a(href="/trangcanhan").text-hover-purple Lê Hoàng Phúc
+                                                        span 10 months, 1 week ago
+                                                    .dots-icon.ml-auto
+                                                        .dots.text-right
+                                                            i.bx.bx-dots-horizontal-rounded
+                                                        ul.actions
+                                                            li
+                                                                a(href="#").text-hover-purple
+                                                                    i.bx.bx-trash
+                                                                    span Chuyển vào thùng rác
+                                                            li 
+                                                                a(href="#").text-hover-purple
+                                                                    i.bx.bx-edit-alt
+                                                                    span Chỉnh sửa bài viết
+
+                                                .post-inner
+                                                    .post-inner-text
+                                                        span At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in cul
+                                                    .isotope-container
+                                                        .isotope-item
+                                                            .image
+                                                                a.d-block.image-lightbox(href="/assets/images/KKK_7527.jpg" data-gallery="portfolioGallery" title="Image Status")
+                                                                    img(src="/assets/images/KKK_7527.jpg", alt="Image Status" )
+                                                        .isotope-item
+                                                            .image
+                                                                a.d-block.image-lightbox(href="/assets/images/personal/1.jpg" data-gallery="portfolioGallery" title="Image Status")
+                                                                    img(src="/assets/images/personal/1.jpg", alt="Image Status" )
+                                                        .isotope-item
+                                                            .image
+                                                                a.d-block.image-lightbox(href="/assets/images/personal/2.jpg" data-gallery="portfolioGallery" title="Image Status")
+                                                                    img(src="/assets/images/personal/2.jpg", alt="Image Status" )
+                                                        .isotope-item
+                                                            .image
+                                                                a.d-block.image-lightbox(href="/assets/images/personal/3.jpg" data-gallery="portfolioGallery" title="Image Status")
+                                                                    img(src="/assets/images/personal/3.jpg", alt="Image Status" )
+                                                        .isotope-item
+                                                            .image
+                                                                a.d-block.image-lightbox(href="/assets/images/personal/2.jpg" data-gallery="portfolioGallery" title="Image Status")
+                                                                    img(src="/assets/images/personal/2.jpg", alt="Image Status" )
+                                                        .isotope-item
+                                                            .image
+                                                                a.d-block.image-lightbox(href="/assets/images/personal/2.jpg" data-gallery="portfolioGallery" title="Image Status")
+                                                                    img(src="/assets/images/personal/2.jpg", alt="Image Status" )
+                                                .comment-area.mt-3   
+                                                    .comment-header
+                                                        .d-flex.align-items-center
+                                                            span
+                                                                img(src="/assets/images/icons/01.png", alt="Icon")              
+                                                            .total-like
+                                                                span.likes 140
+                                                                span &nbsp
+                                                                span Lượt thích
+                                                            a(href="javascript:void(0)").total-comment.ml-auto
+                                                                span.comment-count 200
+                                                                span &nbsp
+                                                                span Bình luận
+                                                        .btn-wrapper.d-flex.align-items-center.justify-content-around.hideDiv
+                                                            .btn.btn-like-post 
+                                                                .icons-meta
+                                                                    a(href="#")
+                                                                        i.bx.bx-like
+                                                                        span Thích
+                                                                    .icon-menu.d-flex
+                                                                        a.like(href="#", title="Like") 
+                                                                            img(src="/assets/images/icons/01.png", alt="Icon Like")
+                                                                            span.tooltiptext Like
+                                                                        a.love(href="#", title="Love") 
+                                                                            img(src="/assets/images/icons/02.png", alt="Icon Love")
+                                                                            span.tooltiptext Thả tim
+                                                                        a.lovely(href="#", title="Lovely") 
+                                                                            img(src="/assets/images/icons/07.png", alt="Icon Lovely")
+                                                                            span.tooltiptext Thương thương
+                                                                        a.think(href="#", title="Think") 
+                                                                            img(src="/assets/images/icons/05.png", alt="Icon Think")
+                                                                            span.tooltiptext Suy ngẫm 
+                                                                        a.sad(href="#", title="Sad") 
+                                                                            img(src="/assets/images/icons/06.png", alt="Icon Sad")
+                                                                            span.tooltiptext Buồn
+                                                                        a.haha(href="#", title="Haha") 
+                                                                            img(src="/assets/images/icons/04.png", alt="Icon Haha")
+                                                                            span.tooltiptext Haha
+                                                                        a.rage(href="#", title="Rage", style="width: 28px") 
+                                                                            img(src="/assets/images/icons/08.png", alt="Icon Rage")
+                                                                            span.tooltiptext Phẫn nộ
+                                                            .btn.btn-comment-post 
+                                                                a(href="#")
+                                                                    i.bx.bx-comment
+                                                                    span Bình luận
+                                                    .comments.hideDiv
+                                                        ul 
+                                                            li
+                                                                .acomment.d-flex
+                                                                    .acomment-avatar.profile-avatar
+                                                                        a(href="/trangcanhan")
+                                                                            img(src="/assets/images/user.jpg", alt="User")
+                                                                    .d-flex.flex-column
+                                                                        .acomment-info.d-flex.flex-column
+                                                                            .acomment-meta
+                                                                                a(href="#").text-hover-purple Lê Hoàng Phúc
+                                                                            .acomment-content
+                                                                                span At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in cul                      
+                                                                            .dots-icon.dots-icon_comment
+                                                                                .dots.text-right
+                                                                                    i.bx.bx-dots-horizontal-rounded
+                                                                                ul.actions
+                                                                                    li
+                                                                                        a(href="#").text-hover-purple
+                                                                                            i.bx.bx-trash
+                                                                                            span Xóa
+                                                                                    li 
+                                                                                        a(href="#").text-hover-purple
+                                                                                            i.bx.bx-edit-alt
+                                                                                            span Chỉnh sửa
+                                                                        .actions.d-flex
+                                                                            button(type="button").btn-like.text-hover-purple Thích 
+                                                                                span ·
+                                                                            span 5 giờ
+                                                        ul 
+                                                            li
+                                                                .acomment.d-flex
+                                                                    .acomment-avatar.profile-avatar
+                                                                        a(href="/trangcanhan")
+                                                                            img(src="/assets/images/user.jpg", alt="User")
+                                                                    .d-flex.flex-column
+                                                                        .acomment-info.d-flex.flex-column
+                                                                            .acomment-meta
+                                                                                a(href="#").text-hover-purple Lê Hoàng Phúc
+                                                                            .acomment-content
+                                                                                span At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in cul
+                                                                            .dots-icon.dots-icon_comment
+                                                                                .dots.text-right
+                                                                                    i.bx.bx-dots-horizontal-rounded
+                                                                                ul.actions
+                                                                                    li
+                                                                                        a(href="#").text-hover-purple
+                                                                                            i.bx.bx-trash
+                                                                                            span Xóa
+                                                                                    li 
+                                                                                        a(href="#").text-hover-purple
+                                                                                            i.bx.bx-edit-alt
+                                                                                            span Chỉnh sửa               
+                                                                        .actions.d-flex
+                                                                            button(type="button").btn-like.text-hover-purple Thích 
+                                                                                span ·
+                                                                            span 5 giờ
+
+                                                    .your-reply.hideDiv
+                                                        .d-flex.align-items-center
+                                                            .profile-avatar
+                                                                a(href="/trangcanhan")
+                                                                    img(src="/assets/images/user.jpg", alt="User")
+                                                            .post-reply-content
+                                                                form(action="", method="POST") 
+                                                                    textarea.form-control.padding-right-80(placeholder="Viết bình luận...")
+                                                                    button.btn(type="submit") Đăng
+
+                                #profile.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab')
+                                    .row
+                                        .col-12
+                                            .your-profile
+                                                ul#myTab.nav.nav-tabs.justify-content-center.justify-content-md-start(role='tablist')
+                                                    li.nav-item(role='presentation')
+                                                        a#viewProfile-tab.nav-link.active(data-toggle='tab' href='#viewProfile' role='tab' aria-controls='viewProfile' aria-selected='true') Thông tin cá nhân
+                                                    li.nav-item(role='presentation')
+                                                        a#editProfile-tab.nav-link(data-toggle='tab' href='#editProfile' role='tab' aria-controls='editProfile' aria-selected='false') Chỉnh sửa thông tin cá nhân
+                                                #myTabContent.tab-content
+                                                    #viewProfile.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='viewProfile-tab')
+                                                        table.table.table-bordered
+                                                            tbody 
+                                                                tr 
+                                                                    td.label Tên hiển thị
+                                                                    td 
+                                                                        p Lê Hoàng Phúc
+                                                                tr 
+                                                                    td.label Lớp
+                                                                    td 
+                                                                        p 17050201
+                                                                tr 
+                                                                    td.label Khoa
+                                                                    td 
+                                                                        p Công nghệ thông tin
+                                                    #editProfile.tab-pane.fade(role='tabpanel' aria-labelledby='editProfile-tab')
+                                                        form(action="", method="POST")
+                                                            .form-group
+                                                                label(for="name") Tên hiển thị
+                                                                input.form-control#name(type="text", name="name", value="Lê Hoàng Phúc")
+                                                            .form-group
+                                                                label(for="class") Lớp
+                                                                input.form-control#class(type="text", name="class", value="51702161")
+                                                            .form-group
+                                                                label(for="major") Khoa
+                                                                input.form-control.major(type="text", name="major", value="Công nghệ thông tin")
+                                                            .text-right
+                                                                button.btn.btn-save(type="submit").background-hover-light-purple Lưu thay đổi
+
+
+

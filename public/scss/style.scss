@@ -1,0 +1,17 @@
+@import "./mixins/mixin";
+@import "./variables/variable";
+@import "./commons/common";
+
+@import "./sections/header";
+@import "./sections/main-sidebar";
+@import "./sections/notification";
+@import "./sections/activity";
+@import "./sections/posts";
+@import "./sections/department-info";
+@import "./sections/list-notification-info";
+@import "./sections/notification-details-info";
+
+@import "./sections/personal-info";
+
+@import "./sections/login-form";
+@import "./sections/manage-department-section";

@@ -1,0 +1,197 @@
+#notification{
+    background-color: white;
+    box-shadow: 0 8px 8px -7px rgba(58, 46, 68, 0.35);
+    padding: 20px;
+    border-left: 1px solid #e7edf2;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .noti-image{
+        width: 25px;
+        height: 25px;
+    }
+    &.p-fixed{
+        position: fixed;
+        top: 61px;
+        bottom: 0;
+
+        //- Custom scrollbar
+        &::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 10px rgba(133, 133, 133, 0.1);
+            background-color: white;
+        }
+        
+        &::-webkit-scrollbar
+        {
+            width: 5px;
+        }
+        
+        &::-webkit-scrollbar-thumb
+        {
+            background-color: $light-purple;
+        }
+    }
+    .title{
+        position: relative;
+        margin-bottom: 22px;
+        font-weight: 600;
+        padding-bottom: 14px;
+        &:before{
+            position: absolute;
+            content: "";
+            background: $purple;
+            height: 2px;
+            width: 40px;
+            bottom: 0;
+        }
+        a{
+            text-transform: none;
+            font-size: 13px;
+            font-weight: 400;
+            color: $purple !important;
+        }
+    }
+
+    .notification-area{
+        padding: 15px 20px 15px 20px;
+        background-image: linear-gradient(135deg
+        , rgba(130, 36, 227, 0.04) 0%, rgba(255, 255, 255, 0) 25%, rgba(130, 36, 227, 0.07) 100%);
+    }
+
+    .list-notification{
+        max-height: 400px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        //- Custom scrollbar
+        &::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 10px rgba(133, 133, 133, 0.1);
+            background-color: white;
+        }
+        
+        &::-webkit-scrollbar
+        {
+            width: 3px;
+        }
+        
+        &::-webkit-scrollbar-thumb
+        {
+            background-color: $light-purple;
+        }
+        .noti{
+            position: relative;
+            .noti-wrapper{
+                padding: 0px 25px;
+            }
+            &:before{
+                position: absolute;
+                content: '';
+                top: 2px;
+                bottom: 2px;
+                width: 2px;         
+                background-color: $light-purple;
+            }
+        }
+        .chat-date-time{
+            display: block;
+            margin-bottom: 8px;
+        }
+        .link{
+            font-weight: 600;
+            line-height: 18px;
+            margin-bottom: 8px;
+        }
+        span, p{
+            font-size: $f-size-para-notify;
+        }
+    }
+
+    .table-datetime{
+        margin: 20px 0px;
+        .xdsoft_datetimepicker{
+            border: none;
+            border-radius: 6px;
+            padding-top: 5px;
+            span, .xdsoft_select{
+                text-decoration: none;
+                font-weight: 500;
+                color: rgb(106, 106, 106);
+            }
+            .xdsoft_monthpicker{
+                button[type="button"]{
+                    transition: .35s ease-in-out;
+                }
+            }
+            .xdsoft_select{
+                border-color: rgba(235, 235, 235, 0.1);
+                .xdsoft_option{
+                    transition: .35s ease-in-out;
+                    &:hover{
+                        background-color: rgb(237, 164, 255) !important;
+                    }
+                }
+                .xdsoft_scrollbar{
+                    width: 3px;
+                }
+            }
+            .xdsoft_monthpicker{
+                .xdsoft_label{
+                    i{
+                        transition: .35s ease-in-out;
+                    }
+                }
+            }
+            .xdsoft_calendar{
+                th, td{
+                    cursor: pointer;
+                }
+                th{
+                    border-color: white;
+                    background-color: rgb(237, 164, 255);
+                    color: white;
+                    padding: 3px;
+                    font-weight: 500;
+                }
+                td{
+                    text-align: center;
+                    border-color: white;
+                    background-color: rgba(214, 214, 214, 0.3);
+                    transition: 0.35s ease-in-out;
+                    > div{
+                        padding: 5px;
+                    }
+                    &:hover{
+                        background-color: rgb(237, 164, 255) !important;
+                    }
+                }
+            }
+            .xdsoft_calendar{
+                padding-top: 3px;
+            }
+            .xdsoft_current{
+                background-color: rgb(237, 164, 255) !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+}
+
+//- RESPONSIVE
+@include max-desktop{
+    //-PREVENT NOTIFICATION FROM FIXED
+    #notification{
+        padding: 15px;
+        border-left: none;
+        box-shadow: 0px 0px 20px 0px rgba(44, 101, 144, 0.1);
+        border-radius: 12px;
+        &.p-fixed{
+            position: relative;
+            top: initial;
+        }
+        .notification-area{
+            border-radius: 6px;
+            padding: 15px 10px 15px 10px;
+        }
+    }
+}

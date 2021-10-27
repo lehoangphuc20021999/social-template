@@ -1,0 +1,497 @@
+#posts,
+#personal-info {
+    margin-top: 30px;
+    .post-item {
+        padding: 20px 15px 0px 15px;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0px 0px 20px 0px rgba(44, 101, 144, 0.1);
+        margin-bottom: 15px;
+
+        .post-header {
+            margin-bottom: 5px;
+            .profile-avatar {
+                border: none;
+                margin-right: 6px;
+                a {
+                    width: 42px;
+                    height: 42px;
+                }
+                img {
+                    border: none;
+                }
+            }
+        }
+
+        .post-meta {
+            a {
+                font-weight: 600;
+                margin-bottom: 1px;
+            }
+            span {
+                font-size: $f-size-para-notify;
+            }
+        }
+
+        .post-inner {
+            .post-inner-text {
+                margin-bottom: 15px;
+            }
+            .image {
+                transition: 0.4s;
+                > * {
+                    transition: 0.4s;
+                }
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+
+        .dots-icon {
+            position: relative;
+            align-self: flex-start;
+            cursor: pointer;
+            line-height: 1;
+            transition: 0.2s ease-in-out;
+
+            .dots {
+                color: $grey;
+                padding: 6px;
+                border-radius: 100%;
+                transform: scale(1);
+                transition: 0.2s ease-in-out;
+                i {
+                    font-size: 24px;
+                }
+                &:hover {
+                    background-color: #f8f8f8;
+                }
+                &:active {
+                    transform: scale(0.95);
+                }
+                &.toggle-bg-color {
+                    background-color: #f8f8f8;
+                }
+            }
+
+            .actions {
+                position: absolute;
+                background-color: white;
+                border-radius: 12px;
+                padding: 5px 15px;
+                border: 1px solid $grey-border;
+                top: 128%;
+                right: 0;
+                min-width: 204px;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.2s ease-in-out;
+                z-index: 99;
+                &.open {
+                    visibility: visible;
+                    opacity: 1;
+                }
+                li:not(:last-child) {
+                    border-bottom: 1px solid #f7f7f7;
+                }
+                a {
+                    display: block;
+                    padding: 12px 0px;
+                }
+                span {
+                    margin-left: 5px;
+                }
+                &::before {
+                    position: absolute;
+                    content: "";
+                    bottom: 92%;
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    border: 1px solid transparent;
+                    border-top-color: $grey-border;
+                    border-left-color: $grey-border;
+                    position: absolute;
+                    right: 10px;
+                    transform: rotate(45deg);
+                    background-color: white;
+                }
+            }
+
+            &.dots-icon_comment {
+                position: absolute;
+                right: 10px;
+
+                .dots {
+                    padding: 5px;
+                    z-index: 99;
+                    i {
+                        font-size: 16px;
+                    }
+                    &:hover {
+                        background-color: white;
+                    }
+                    &.toggle-bg-color {
+                        background-color: white;
+                    }
+                }
+                .actions {
+                    padding: 5px 8px;
+                    right: -6px;
+                    top: 147%;
+                    min-width: 100px;
+
+                    li {
+                        margin-bottom: 0;
+                    }
+                    a {
+                        padding: 5px 0px;
+                        i,
+                        span {
+                            font-size: $f-size-para-notify;
+                        }
+                    }
+                    span {
+                        margin-left: 5px;
+                    }
+                    &::before {
+                        bottom: 91%;
+                    }
+                }
+            }
+        }
+    }
+    .comment-area {
+        .icons-meta {
+            position: relative;
+            > span {
+                cursor: pointer;
+            }
+            &:hover {
+                .icon-menu {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .comment-header {
+            margin-bottom: 20px;
+            > div {
+                padding: 10px 0px;
+                border-bottom: 1px solid $grey-border;
+            }
+            .icon-menu {
+                position: absolute;
+                display: flex;
+                justify-content: space-between;
+                bottom: calc(100% + 5px);
+                min-width: 260px;
+                padding: 10px 5px;
+                border-radius: 50px;
+                background-color: white;
+                border: 0.5px solid rgb(250, 250, 250);
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+                img {
+                    transition: 0.3s ease-in-out;
+                }
+                a {
+                    position: relative;
+                    &:hover {
+                        img {
+                            transform: scale(1.25);
+                        }
+                        .tooltiptext {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+                .tooltiptext {
+                    position: absolute;
+                    top: -38px;
+                    left: 50%;
+                    transform: translateX(calc(-50% - 5px));
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0.87);
+                    border-radius: 3px;
+                    color: white;
+                    font-size: 12px;
+                    padding: 5px 6px;
+                    white-space: nowrap;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.3s ease-in-out;
+                    &::before {
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        content: "";
+                        transform: translateX(-50%);
+                        border-width: 5px;
+                        border-style: solid;
+                        border-color: rgba(0, 0, 0, 0.871) transparent transparent transparent;
+                    }
+                }
+            }
+            .total-like {
+                margin: 0px 16px 0px 8px;
+            }
+            .total-comment {
+                position: relative;
+                //- HOVER CHO PHẦN BINH LUẬN
+                &::before {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 1px;
+                    background-color: black;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.4s;
+                }
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+            .btn-wrapper {
+                padding: 4px 0px;
+                &.hideDiv {
+                    border-bottom: 0;
+                }
+                .btn {
+                    flex-grow: 1;
+                    text-align: center;
+                    border-radius: 6px !important;
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.03);
+                    }
+                    &:first-child {
+                        margin-right: 4px;
+                    }
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 28px;
+                    }
+                    i {
+                        font-size: 18px;
+                        line-height: 1;
+                    }
+                    span {
+                        font-weight: 600;
+                        margin-left: 6px;
+                    }
+                }
+            }
+        }
+
+        .comments {
+            //-
+            &.hideDiv {
+                display: none;
+            }
+            li {
+                margin-bottom: 12px;
+                a,
+                span {
+                    font-size: $f-size-para-comment;
+                    line-height: 20px;
+                }
+            }
+            .replies {
+                > div {
+                    margin-top: 10px;
+                }
+            }
+            .acomment-meta {
+                font-weight: 600;
+            }
+            .acomment-info {
+                position: relative;
+                background-color: rgba(156, 81, 233, 0.07);
+                border-radius: 20px;
+                padding: 8px 16px;
+                margin-bottom: 2px;
+                .actions-comment {
+                    position: absolute;
+                    right: 0;
+                    background-color: red;
+                    li {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+            .actions {
+                padding-left: 16px;
+                button[type="button"] {
+                    font-size: $f-size-para-notify;
+                    position: relative;
+                    font-weight: 600;
+                    background-color: transparent;
+                    border: none;
+                    &:not(:last-child) {
+                        margin-right: 5px;
+                    }
+                    span {
+                        margin-left: 5px;
+                    }
+                    &:first-child {
+                        span {
+                            margin-left: 3px;
+                        }
+                    }
+                    &:last-child {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        .your-reply {
+            //-
+            padding-bottom: 15px;
+            &.hideDiv {
+                display: none;
+            }
+            &.sub {
+                margin-top: 10px;
+                padding-bottom: 0;
+            }
+            &.closeDiv {
+                display: none;
+            }
+            .profile-avatar {
+                margin: 0px 16px 0px 0px;
+                a {
+                    width: 33px;
+                    height: 33px;
+                }
+            }
+            .post-reply-content {
+                flex-grow: 1;
+                position: relative;
+                button[type="submit"] {
+                    display: none;
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    //-
+                    background-color: $light-purple;
+                    color: white;
+                    &:hover {
+                        background-color: $purple;
+                    }
+                }
+                textarea {
+                    height: 45px;
+                    padding: 10px 80px 10px 25px;
+                }
+            }
+        }
+    }
+}
+
+#post1 {
+    .item {
+        text-align: center;
+        padding: 120px 0px;
+    }
+}
+.btn-load-more {
+    margin-bottom: 10px;
+    position: relative;
+    background-color: #eda4ff !important;
+    padding: 6px 15px !important;
+
+    &.btn-loading {
+        &::after {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border: 3px solid #ffffff36;
+            border-radius: 50%;
+            border-top-color: #ffffff;
+            animation: animate-loading 1s ease infinite;
+        }
+        .btn-text {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+}
+
+@-webkit-keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+//- RESPONSIVE
+@include max-tablet {
+    #posts,
+    #personal-info {
+        .post-item {
+            .total-like,
+            .total-comment,
+            .icons-meta,
+            .btn-comment-post,
+            .post-inner-text {
+                span {
+                    font-size: $f-size-para-comment;
+                }
+            }
+            .dots-icon {
+                .actions {
+                    span {
+                        font-size: $f-size-para-comment;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include max-mobile {
+    #posts,
+    #personal-info {
+        .post-item {
+            .dots-icon {
+                .dots {
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

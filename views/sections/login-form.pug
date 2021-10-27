@@ -1,0 +1,32 @@
+section#login-form-section.d-flex.justify-self-center.align-items-center
+    .container 
+        .row.justify-content-center
+            .col-xl-5.col-lg-7.col-md-12
+                .form-content
+                    h3.title.text-center 
+                        img.header-logo(src='/assets/images/logo.png' alt='Logo Brand')
+                        p.small-text Social Network
+                        p.big-text.text-center Đăng nhập
+                    form#login-form
+                        .form-group.mb-3
+                            label(for="email") Email:
+                            input#email.form-control(type="email", name="email", placeholder="Nhập Email...") 
+                        .form-group 
+                            label(for="password") Mật khẩu:
+                            input#password.form-control(type="password", name="password", placeholder="Mật khẩu...") 
+                        .form-group 
+                            .alert-error
+                        .ft-login.d-flex.align-items-center.justify-content-between
+                            .save-pw.d-flex.align-items-center
+                                input#save-pw(type="checkbox", name="remember")
+                                label(for="save-pw").mb-0 Lưu mật khẩu
+                            .forget-pw.text-center
+                                a(href="#") Quên mật khẩu ?
+                        button.btn.background-hover-pink.text-white.w-100(type="submit") Đăng nhập
+                    p.text-center.mb-3 Chưa có tài khoản đăng kí
+                        span &nbsp
+                        a(href="/register").purple-text tại đây
+                    p.lineside Hoặc
+                    .social-login
+                        a(href="/google").btn.google.d-flex.justify-content-center
+                            i.bx.bxl-google-plus-circle

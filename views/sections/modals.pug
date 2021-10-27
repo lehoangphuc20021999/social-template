@@ -1,0 +1,199 @@
+//- MODAL PREVIEW AVATAR
+#previewAvatarModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+        .modal-content.mx-auto.w-auto.border-0
+            .modal-header.p-0.border-0
+                img(src="/assets/images/personal/3.jpg", alt="Header Avatar")
+
+//------------------- POST -------------------//
+
+//- MODAL EDIT POST
+#edit-post-model.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.modal-dialog-scrollable
+        .modal-content
+            .modal-header
+                h5#exampleModalLabel.modal-title Sửa Bài Viết
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') ×
+            form#form-edit-post
+                .modal-body
+                        textarea#textarea-activity-edit.form-control.mb-3(rows="1", name="textBlog", placeholder="Phúc ơi, bạn đang nghĩ gì thế ?")
+                        ul.upload-filelist
+                            li.upload-file-edit
+                                .d-flex.flex-column.align-items-center.py-3
+                                    .file-thumb
+                                        //- .row to allow flex-wrap (Auto break line when not enough width)
+                                        .row.mx-0
+                                            .inner-image-edit
+                                    .file-action-edit
+                                        i.bx.bx-x-circle
+                .modal-footer
+                    .form-bottom.d-flex
+                        .files-edit.mr-auto
+                            label(for="files-edit").text-hover-purple
+                                i.icofont-file-image
+                                span Đính kèm ảnh
+                            input#files-edit(type="file", name="images", multiple="multiple", accept="image/png, image/jpeg", style="visibility: hidden;")
+                        .btn-wrapper
+                            button.btn.btn-primary#btn-confirm-edit(type="submit") Chỉnh sửa
+
+//- MODAL DELETE POST
+#delete-blog-model.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    h5#exampleModalLabel.modal-title Xóa Bài viết
+                    button.close(type='button' data-dismiss='modal' aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body 
+                    span Bạn có muốn xóa bài viết này?
+                .modal-footer
+                    button.btn.btn-danger(type='button' data-dismiss='modal') Close
+                    button.btn.btn-success.btn-confirm-delete(type='button') Confirm
+
+//------------------- PHONG BAN -------------------//
+
+//- MODAL EDIT PHONGBAN
+#edit-phongBan-model.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                h5#exampleModalLabel.modal-title Sửa Phòng Ban
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body 
+                form()
+                    .form-group
+                        label(for="nameDepartmentEdit") Tên phòng ban:
+                        input.form-control#nameDepartmentEdit(type="text", name="nameDepartmentEdit", placeholder="Nhập tên phòng ban")
+                    .form-group 
+                        .alert-error-name-modal
+            .modal-footer
+                button.btn.btn-danger(type='button' data-dismiss='modal') Close
+                button.btn.btn-success.btn-confirm-edit(type='button') Confirm
+
+//------------------- CLASS -------------------//
+//- MODAL-DELETE-CLASS
+#delete-class-model.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true' style="z-index: 9999999")
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                h5#exampleModalLabel.modal-title Xóa Lớp Học
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body 
+                span Bạn có muốn xóa lớp học
+                    strong#name ?
+            .modal-footer
+                button.btn.btn-danger(type='button' data-dismiss='modal') Close
+                button.btn.btn-success.btn-confirm-delete(type='button') Confirm
+
+//- MODAL-EDIT-CLASS
+#edit-class-model.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true' style="z-index: 9999999")
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                h5#exampleModalLabel.modal-title Sửa Lớp Học
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body 
+                form()
+                    .form-group
+                        label(for="nameClassEdit") Tên Lớp học:
+                        input.form-control#nameClassEdit(type="text", name="nameClassEdit", placeholder="Nhập tên lớp học")
+                    .form-group 
+                        .alert-error-name-modal
+            .modal-footer
+                button.btn.btn-danger(type='button' data-dismiss='modal') Close
+                button.btn.btn-success.btn-confirm-edit(type='button') Confirm
+
+//------------------- DEPARTMENT -------------------//
+//- MODAL DELETE PHONGBAN
+#delete-phongBan-model.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                h5#exampleModalLabel.modal-title Xóa Phòng Ban
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body 
+                span Bạn có muốn xóa Phòng ban 
+                    strong#name ?
+            .modal-footer
+                button.btn.btn-danger(type='button' data-dismiss='modal') Close
+                button.btn.btn-success.btn-confirm-delete(type='button') Confirm
+
+//- MODAL-EDIT-COMMENT
+#edit-comment-model.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                h5#exampleModalLabel.modal-title Sửa Bình Luận
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body 
+                form()
+                    .form-group
+                        label(for="commentEdit") Bình luận của bạn:
+                        input.form-control#commentEdit(type="text", name="commentEdit", placeholder="Nhập bình luận của bạn")
+                    .form-group 
+                        .alert-error-comment-modal
+            .modal-footer
+                button.btn.btn-danger(type='button' data-dismiss='modal') Close
+                button.btn.btn-success.btn-confirm-edit(type='button') Confirm
+
+#delete-comment-model.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                h5#exampleModalLabel.modal-title Xóa Bình Luận
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body 
+                span Bạn có muốn xóa Bình luận ?
+                .alert-error-comment-modal
+            .modal-footer
+                button.btn.btn-danger(type='button' data-dismiss='modal') Close
+                button.btn.btn-success.btn-confirm-delete(type='button') Confirm
+
+//------------------- NOTIFICATION -------------------//
+//- Hoai them 15/5 edit and delete Notification Modal
+#edit-notify-model.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                h5#exampleModalLabel.modal-title Sửa Thông báo
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body 
+                form
+                    .form-group
+                        label(for="subjectEdit") Tiêu đề:
+                        input.form-control#subjectEdit(type="text", name="subjectEdit", placeholder="Nhập tiêu đề thông báo")
+                    .form-group
+                        label(for="contentEdit") Nội dung:
+                        input.form-control#contentEdit(type="text", name="contentEdit", placeholder="Nhập nội dung thông báo")
+                    .form-group
+                        label(for="departmentEdit") Phòng ban:
+                        select#departmentEdit.form-control(name='departmentEdit')
+                            option(value="" selected disabled) Chọn phòng ban
+                    .form-group 
+                        .alert-error-notify-modal
+            .modal-footer
+                button.btn.btn-danger(type='button' data-dismiss='modal') Close
+                button.btn.btn-success.btn-confirm-edit(type='button') Confirm
+
+#delete-notify-model.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                h5#exampleModalLabel.modal-title Xóa Thông báo
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body 
+                span Bạn có muốn xóa Thông báo 
+                    strong#name ?
+                .alert-error-comment-modal
+            .modal-footer
+                button.btn.btn-danger(type='button' data-dismiss='modal') Close
+                button.btn.btn-success.btn-confirm-delete(type='button') Confirm
