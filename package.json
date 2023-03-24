@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"node index.js\" \"node-sass -w ./public/scss/ -o ./public/stylesheets/\" \"watchify ./public/js/script.js -o ./public/javascripts/main.js -d -v -t babelify --plugin tinyify\"",
+    "start": "concurrently \"node index.js\" \"sass -w ./public/scss/ -o ./public/stylesheets/\" \"watchify ./public/js/script.js -o ./public/javascripts/main.js -d -v -t babelify --plugin tinyify\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
